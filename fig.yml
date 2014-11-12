@@ -15,5 +15,5 @@ db:
   ports:
     - "3306:3306"
   volumes:
-    - /etc/my.conf:/etc/mysql/my.conf:ro
+    - /etc/my.cnf:/etc/mysql/my.cnf:ro
     - /var/lib/mysql/mysql.sock:/var/lib/mysql/mysql.sock
