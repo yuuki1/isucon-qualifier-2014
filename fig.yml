@@ -12,8 +12,10 @@ memcached:
     - "11211:11211"
 db:
   image: mysql:5.5.40
+  environment:
+    - MYSQL_ROOT_PASSWORD=mysecretpassword
   ports:
     - "3306:3306"
   volumes:
-    - /etc/my.cnf:/etc/mysql/my.cnf:ro
+    - /etc/my.cnf:/etc/my.cnf:ro
     - /var/lib/mysql/mysql.sock:/var/lib/mysql/mysql.sock
