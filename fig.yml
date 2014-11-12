@@ -4,7 +4,6 @@ proxy:
     - "80:80"
   volumes:
     - /etc/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
-    - /tmp/app.sock:/tmp/app.sock
 memcached:
   image: sylvainlasnier/memcached:latest
   command: memcached -p 11211 -m 640 -c 1024
@@ -18,4 +17,3 @@ db:
     - "3306:3306"
   volumes:
     - /etc/my.cnf:/etc/my.cnf:ro
-    - /var/lib/mysql/mysql.sock:/var/lib/mysql/mysql.sock
